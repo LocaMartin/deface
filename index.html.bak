@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loca Martin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .gif {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+        #musicPlayer {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <img src="/L.gif" class="gif" alt="gif">
+    <audio id="musicPlayer" autoplay loop preload="auto">
+        <source src="/L.mp3" type="audio/mp3">
+    </audio>
+    
+    <script>
+    const player = document.getElementById('musicPlayer');
+    
+    player.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    });
+    
+
+    document.addEventListener('DOMContentLoaded', function() {
+        player.play().catch(error => {
+
+            console.log('Autoplay prevented:', error);
+        });
+    });
+    </script>
+</body>
+</html>
