@@ -23,9 +23,9 @@
     </style>
 </head>
 <body>
-    <img src="/L.gif" class="gif" alt="gif">
+    <img src="L.gif" class="gif" alt="gif">
     <audio id="musicPlayer" autoplay loop preload="auto">
-        <source src="/L.mp3" type="audio/mp3">
+        <source src="L.mp3" type="audio/mp3">
     </audio>
     
     <script>
